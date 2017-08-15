@@ -1,0 +1,79 @@
+//respawn = 2;
+//respawnOnStart = 0;
+//respawnDelay = 2;
+setViewDistance = 6000;
+
+class CfgMusic
+{
+sounds[] = {01,02,03,04,05};
+class 01
+{
+name = "Kellys Heroes Commando Prelude";
+sound[] = {"music\Commando_Prelude.ogg", db+10, 1.0};
+titles[] = {0,""};
+};
+class 02
+{
+name = "Kellys Heroes Minefield";
+sound[] = {"music\Minefield.ogg", db+10, 1.0};
+titles[] = {0,""};
+};
+class 03
+{
+name = "Kellys Heroes Ready For The Ambush";
+sound[] = {"music\Ready_For_The_Ambush.ogg", db+10, 1.0};
+titles[] = {0,""};
+};
+class 04
+{
+name = "Kellys Heroes Tiger Tank";
+sound[] = {"music\Tiger_Tank.ogg", db+10, 1.0};
+titles[] = {0,""};
+};
+class 05
+{
+name = "Kellys Heroes Quick Draw Kelly";
+sound[] = {"music\Quick_Draw_Kelly.ogg", db+10, 1.0};
+titles[] = {0,""};
+};
+};
+
+class CfgSFX
+{
+sounds[] = {Church, Oddball};
+class Church
+{
+name = "Kellys Heroes Church Bells";
+sound0[] = {"sfx\Church_Bells.ogg", db-0, 1.0, 1200, 1, 0, 0, 0};
+sounds[] = {sound0};
+empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+};
+class Oddball
+{
+name = "Kellys Heroes Sherman Holiday Inn";
+sound0[] = {"sfx\Sherman_Holiday_Inn.ogg", db-0, 1.0, 120, 1, 0, 0, 0};
+sounds[] = {sound0};
+empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+};
+};
+
+
+
+//----- For PvP ---------
+//disableChannels[]={0,6};
+joinUnassigned = 1;
+
+corpseLimit = 30;
+corpseRemovalMinTime = 60;
+corpseRemovalMaxTime = 300;
+
+wreckLimit = 15;
+wreckRemovalMinTime = 60;
+wreckRemovalMaxTime = 1200;
+
+class Header
+{
+	gameType =sandbox;
+	minPlayers = 1;
+	maxPlayers = 149;
+};
