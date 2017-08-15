@@ -15730,7 +15730,7 @@ class Mission
 			{
 				text="Fast Forward Time";
 				condition="call{this}";
-				onActivation="call{skipTime 12; titleText [""Later that day..."", ""PLAIN DOWN"", 3];}";
+				onActivation="call{skipTime 12; titleText ["<t color='#ffffff' size='5'>Later that day...</t><br/>***********", "PLAIN", -1, true, true];;}";
 				sizeA=300;
 				sizeB=300;
 				activationBy="GUER";
