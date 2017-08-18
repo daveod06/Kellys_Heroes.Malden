@@ -36,6 +36,12 @@ name = "Kellys Heroes Quick Draw Kelly";
 sound[] = {"music\Quick_Draw_Kelly.ogg", db+10, 1.0};
 titles[] = {0,""};
 };
+class 06
+{
+name = "Kellys Heroes Close Order Drill";
+sound[] = {"music\Close_Order_Drill.ogg", db+10, 1.0};
+titles[] = {0,""};
+};
 };
 
 class CfgSFX
