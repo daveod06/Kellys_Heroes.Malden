@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1505;
+		nextID=1507;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7676.8271,56.188381,4188.209};
-		dir[]={0.86504221,-0.45645493,0.20880742};
-		up[]={0.44394869,0.889512,0.10716582};
-		aside[]={0.23468795,-2.1871892e-006,-0.97219491};
+		pos[]={7742.9707,75.166725,4138.1182};
+		dir[]={-0.5191943,-0.47309417,0.71194851};
+		up[]={-0.27889922,0.88077229,0.38243479};
+		aside[]={0.80805904,-2.3343309e-006,0.58930439};
 	};
 };
 binarizationWanted=0;
@@ -569,7 +569,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=355;
+		items=357;
 		class Item0
 		{
 			dataType="Object";
@@ -6638,7 +6638,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={5323.6919,370.60837,7192.8491};
-			angle=0.47043592;
+			angle=0.47043589;
 			class Attributes
 			{
 				name="detect_truck_2";
@@ -8928,7 +8928,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={4607.5078,414.34171,6493.4331};
-			angle=3.9111595;
+			angle=3.9111593;
 			class Attributes
 			{
 				text="Trigger Minefield Music";
@@ -18142,6 +18142,38 @@ class Mission
 			{
 			};
 			id=1499;
+			type="LIB_opelblitz_ammo";
+		};
+		class Item355
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7738.8745,37.101563,4185.5288};
+				angles[]={-0,6.1803827,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1505;
+			type="LIB_opelblitz_ammo";
+		};
+		class Item356
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7739.6211,37.09322,4178.3667};
+				angles[]={-0,6.1803827,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1506;
 			type="LIB_opelblitz_ammo";
 		};
 	};
