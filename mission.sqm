@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5322.6831,391.2551,7184.8892};
-		dir[]={-0.32275057,-0.7395137,0.59093523};
-		up[]={-0.35451731,0.67285013,0.6490894};
-		aside[]={0.8777191,-8.993622e-006,0.47939831};
+		pos[]={5357.6743,453.3143,7126.5801};
+		dir[]={-0.4085398,-0.76170576,0.50313818};
+		up[]={-0.48018488,0.64763558,0.59136695};
+		aside[]={0.77638382,-9.4501738e-006,0.63042736};
 	};
 };
 binarizationWanted=0;
@@ -6613,7 +6613,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={5323.6919,370.60837,7192.8491};
-			angle=0.47043604;
+			angle=0.47043598;
 			class Attributes
 			{
 				name="detect_truck_2";
@@ -8942,7 +8942,7 @@ class Mission
 					};
 					id=692;
 					type="LIB_US_smgunner";
-					atlOffset=-7.6293945e-006;
+					atlOffset=-1.5258789e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9022,7 +9022,7 @@ class Mission
 					};
 					id=693;
 					type="LIB_US_smgunner";
-					atlOffset=0.39562225;
+					atlOffset=0.39561462;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9102,7 +9102,7 @@ class Mission
 					};
 					id=694;
 					type="LIB_US_mgunner";
-					atlOffset=0.22188568;
+					atlOffset=0.22187805;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9502,7 +9502,7 @@ class Mission
 					};
 					id=708;
 					type="LIB_US_tank_sergeant";
-					atlOffset=0.18612671;
+					atlOffset=0.18611908;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9654,7 +9654,7 @@ class Mission
 				formation="STAG COLUMN";
 			};
 			id=690;
-			atlOffset=-7.6293945e-006;
+			atlOffset=-1.5258789e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -19190,7 +19190,7 @@ class Mission
 			class Attributes
 			{
 				text="Task 4 Complete - Destory Minefield Patrol";
-				condition="call{trucks_in_place;}";
+				condition="call{this && trucks_in_place;}";
 				onActivation="call{task_4_done = true;}";
 				sizeA=100;
 				sizeB=100;
