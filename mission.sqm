@@ -569,7 +569,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=357;
+		items=355;
 		class Item0
 		{
 			dataType="Object";
@@ -3107,7 +3107,7 @@ class Mission
 			};
 			id=258;
 			type="Land_Table_EP1";
-			atlOffset=1.4473419;
+			atlOffset=1.4473572;
 		};
 		class Item35
 		{
@@ -3118,13 +3118,12 @@ class Mission
 				angles[]={0.0087073296,0.71458918,6.2756367};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 			};
 			id=259;
 			type="Land_Table_EP1";
-			atlOffset=7.6293945e-005;
+			atlOffset=1.4352722;
 		};
 		class Item36
 		{
@@ -3141,7 +3140,6 @@ class Mission
 			};
 			id=260;
 			type="Land_Table_EP1";
-			atlOffset=0.0002746582;
 		};
 		class Item37
 		{
@@ -6640,7 +6638,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={5323.6919,370.60837,7192.8491};
-			angle=0.47043595;
+			angle=0.47043592;
 			class Attributes
 			{
 				name="detect_truck_2";
@@ -8930,7 +8928,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={4607.5078,414.34171,6493.4331};
-			angle=3.91116;
+			angle=3.9111595;
 			class Attributes
 			{
 				text="Trigger Minefield Music";
@@ -11677,7 +11675,7 @@ class Mission
 			};
 			id=875;
 			type="EmptyDetector";
-			atlOffset=0.30499268;
+			atlOffset=0.13114929;
 		};
 		class Item244
 		{
@@ -13572,7 +13570,7 @@ class Mission
 			};
 			id=1211;
 			type="LIB_StuG_III_G";
-			atlOffset=0.15200043;
+			atlOffset=9.9182129e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -18145,75 +18143,6 @@ class Mission
 			};
 			id=1499;
 			type="LIB_opelblitz_ammo";
-		};
-		class Item355
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=2;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7696.6895,36.946346,4199.103};
-						angles[]={6.2280407,3.5689392,6.2176795};
-					};
-					side="West";
-					flags=6;
-					class Attributes
-					{
-					};
-					id=1503;
-					type="LIB_GER_unequip";
-					atlOffset=1.1444092e-005;
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7696.6895,36.946346,4199.103};
-						angles[]={6.2280407,3.5689392,6.2176795};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=1504;
-					type="LIB_GER_unequip";
-					atlOffset=1.1444092e-005;
-				};
-			};
-			class Attributes
-			{
-			};
-			id=1501;
-			atlOffset=1.1444092e-005;
-		};
-		class Item356
-		{
-			dataType="Trigger";
-			position[]={7696.7983,38.605637,4198.9614};
-			angle=1.6361063;
-			class Attributes
-			{
-				text="Detect Start of Attack";
-				condition="call{this}";
-				onActivation="call{attack_started = true; hint ""ATTACK HAS STARTED!"";}";
-				sizeA=150;
-				sizeB=100;
-				sizeC=20;
-				activationType="WEST D";
-				activationBy="GUER";
-				effectMusic="04";
-			};
-			id=1502;
-			type="EmptyDetectorArea10x10";
-			atlOffset=1.6729202;
 		};
 	};
 	class Connections
