@@ -3,6 +3,12 @@
 //respawnDelay = 2;
 setViewDistance = 6000;
 
+author="Sabersnack";
+OnLoadName = "Kelly's Heroes";
+OnLoadMission = "Kill Nazis. Link up with Oddball. Steal the gold.";
+loadScreen = "images\Kelly_Heroes.jpg";
+onLoadMissionTime = 1;
+
 class CfgMusic
 {
 sounds[] = {01,02,03,04,05};
