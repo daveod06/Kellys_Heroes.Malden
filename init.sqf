@@ -25,7 +25,9 @@
 //for "_i" from 1 to _rounds do { _firerun = _ammo createvehicle [(getmarkerpos _marker select 0) + random _xcoord, (getmarkerpos _marker select 1) + random _ycoord, getmarkerpos _marker select 2]; sleep (random 3);}; };
 
 
-
+attack_started = false;
+bells_ringing = false;
+tank_engines_on = false;
 
 if (isnil "DZ_fnc_MortarFire") then { 
 	DZ_fnc_MortarFire = { 

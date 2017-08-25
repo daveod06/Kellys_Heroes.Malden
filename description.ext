@@ -42,6 +42,12 @@ name = "Kellys Heroes Close Order Drill";
 sound[] = {"music\Close_Order_Drill.ogg", db+10, 1.0};
 titles[] = {0,""};
 };
+class 07
+{
+name = "Kellys Heroes Take Cover";
+sound[] = {"music\Take_Cover.ogg", db+10, 1.0};
+titles[] = {0,""};
+};
 };
 
 class CfgSFX
