@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1570;
+		nextID=1578;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5396.1328,872.54626,7217.2837};
-		dir[]={-0.9234851,0.20638072,0.32350442};
-		up[]={0.19476944,0.97847795,-0.068229966};
-		aside[]={0.33062133,9.4641291e-007,0.94381064};
+		pos[]={6883.2598,943.04395,7612.5801};
+		dir[]={-0.87684494,-0.46634585,0.11797157};
+		up[]={-0.46230105,0.88451827,0.062194563};
+		aside[]={0.13335377,-2.0667212e-006,0.99119496};
 	};
 };
 binarizationWanted=0;
@@ -568,18 +568,18 @@ class Mission
 		briefingName="Kelly's Heroes Malden";
 		overviewText="Kelly's Heroes";
 		resistanceWest=0;
-		startWeather=0.26279214;
+		startWeather=0.16113187;
 		startWind=0.1;
 		startWaves=0.1;
-		forecastWeather=0.31362242;
+		forecastWeather=0.13995266;
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
 		year=2035;
 		month=8;
 		day=22;
-		hour=4;
-		minute=-5;
+		hour=3;
+		minute=8;
 		startFogBase=-1000;
 		forecastFogBase=-1000;
 		startFogDecay=0.014;
@@ -587,7 +587,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=375;
+		items=377;
 		class Item0
 		{
 			dataType="Object";
@@ -6580,7 +6580,7 @@ class Mission
 		class Item165
 		{
 			dataType="Trigger";
-			position[]={7270.4048,167.57001,8021.8799};
+			position[]={7264.9741,167.72301,8005.5591};
 			class Attributes
 			{
 				text="Detect Start of Attack";
@@ -6595,6 +6595,7 @@ class Mission
 			};
 			id=547;
 			type="EmptyDetectorArea10x10";
+			atlOffset=0.00012207031;
 		};
 		class Item166
 		{
@@ -6696,16 +6697,17 @@ class Mission
 		class Item172
 		{
 			dataType="Trigger";
-			position[]={5323.6919,370.60837,7192.8491};
-			angle=0.47043598;
+			position[]={5326.958,370.20755,7192.6851};
+			angle=0.47043586;
 			class Attributes
 			{
 				name="detect_truck_2";
 				text="Detect Truck #2";
-				condition="call{(truck_d2 in thisList) || (truck_2 in thisList);}";
-				onActivation="call{trucks_in_place = true; cutText [""The Germans are checking the minefield."", ""plain""]; doGetOut car_d1; doGetOut truck_d1; doGetOut truck_d2; truck_1d disableAI ""MOVE""; if (isEngineOn truck_1) then {truck_1 engineOn false}; truck_2d disableAI ""MOVE""; if (isEngineOn truck_2) then {truck_2 engineOn false}; car_1d disableAI ""MOVE""; if (isEngineOn car_1) then {car_1 engineOn false};}";
+				condition="call{truck_2 in thisList || truck_d2 in thisList;}";
+				onActivation="call{trucks_in_place = true;}";
 				sizeA=10;
-				sizeB=45;
+				sizeB=60;
+				activationBy="WEST";
 				isRectangle=1;
 			};
 			id=614;
@@ -6808,7 +6810,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=7;
+				items=8;
 				class Item0
 				{
 					dataType="Object";
@@ -7008,38 +7010,49 @@ class Mission
 				class Item4
 				{
 					dataType="Waypoint";
-					position[]={5324.5742,370.44034,7190.8638};
-					expCond="call{trucks_in_place;}";
-					expActiv="call{if (isEngineOn car_1) then {car_1 engineOn false}; car_1D disableAI ""MOVE""; if (isEngineOn truck_1) then {truck_1 engineOn false}; truck_1D disableAI ""MOVE""; if (isEngineOn truck_2) then {truck_2 engineOn false}; truck_2D disableAI ""MOVE"";}";
+					position[]={5338.0537,369.70328,7215.1133};
 					class Effects
 					{
 					};
 					showWP="NEVER";
-					id=621;
+					id=1572;
 					type="Move";
 				};
 				class Item5
 				{
 					dataType="Waypoint";
-					position[]={5331.0288,370.20969,7205.665};
+					position[]={5339.5156,369.79056,7218.6987};
 					expCond="call{true}";
 					class Effects
 					{
 					};
 					showWP="NEVER";
-					id=622;
+					id=1573;
 					type="Move";
 				};
 				class Item6
 				{
 					dataType="Waypoint";
-					position[]={5333.4199,370.04279,7210.5498};
+					position[]={5340.2573,369.83856,7220.6113};
 					type="TransportUnload";
+					expCond="call{true}";
+					expActiv="call{trucks_in_place = true;}";
 					class Effects
 					{
 					};
 					showWP="NEVER";
-					id=947;
+					id=1575;
+				};
+				class Item7
+				{
+					dataType="Waypoint";
+					position[]={5329.3545,370.93292,7220.4458};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=1576;
+					type="Move";
 				};
 			};
 			class Attributes
@@ -8875,7 +8888,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={4607.5078,414.34171,6493.4331};
-			angle=3.9111576;
+			angle=3.9111578;
 			class Attributes
 			{
 				text="Trigger Minefield Music";
@@ -11998,6 +12011,7 @@ class Mission
 			};
 			id=964;
 			type="LIB_US_Willys_MB";
+			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -13607,7 +13621,7 @@ class Mission
 		class Item296
 		{
 			dataType="Trigger";
-			position[]={6177.7754,123.83547,8616.3906};
+			position[]={6177.7749,123.83546,8616.3906};
 			class Attributes
 			{
 				name="mortar_trigger_8";
@@ -17651,8 +17665,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={5188.7217,411.96582,7533.729};
-				angles[]={6.2583928,0,6.2009716};
+				position[]={5198.2783,411.02029,7527.2998};
+				angles[]={6.2559919,0,6.2033553};
 			};
 			name="task_2";
 			id=1511;
@@ -17932,11 +17946,11 @@ class Mission
 			{
 				text="Task 2 Complete";
 				condition="call{this}";
-				onActivation="call{task_2_done = true;" \n "cutText [""GET OUT OF THE TRUCKS! TAKE COVER!"", ""PLAIN""]; _center = createCenter sideLogic;" \n "_group = createGroup _center;     " \n "_pos = getposatl kellys_car_1; " \n "_cas = _group createUnit [""ModuleCAS_F"",_pos , [], 0, """"]; " \n "_cas setVariable [""type"", 0,true]; " \n "_cas setDir 15;}";
+				onActivation="call{task_2_done = true;" \n "cutText [""GET OUT OF THE TRUCKS! TAKE COVER!"", ""PLAIN""]; " \n "[""scripts\cas.sqf""] remoteExec [""execVM"", 2, false];}";
 				sizeA=15;
 				sizeB=15;
 				sizeC=10;
-				timeout[]={50,55,60};
+				timeout[]={1,1,1};
 				interuptable=1;
 				activationBy="GUER";
 				effectMusic="07";
@@ -18294,7 +18308,7 @@ class Mission
 		class Item336
 		{
 			dataType="Trigger";
-			position[]={5281.2588,376.89114,7216.8071};
+			position[]={5278.1499,376.58087,7212.8071};
 			class Attributes
 			{
 				text="Task 3 Complete - Move to Minefield";
@@ -18743,7 +18757,7 @@ class Mission
 		class Item344
 		{
 			dataType="Trigger";
-			position[]={5285.0464,373.76508,7212.2949};
+			position[]={5285.0459,373.76517,7212.2949};
 			class Attributes
 			{
 				text="Set Off Mine";
@@ -18756,6 +18770,7 @@ class Mission
 			};
 			id=1527;
 			type="EmptyDetectorAreaR50";
+			atlOffset=3.0517578e-005;
 		};
 		class Item345
 		{
@@ -19665,7 +19680,7 @@ class Mission
 				condition="call{this && !(Money1 in thisList)}";
 				sizeA=3;
 				sizeB=3;
-				activationBy="ANY";
+				activationBy="GUER";
 				isRectangle=1;
 			};
 			id=1551;
@@ -20020,7 +20035,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8283.2031,1.4113672,8712.4941};
-				angles[]={6.2001762,0,6.2432065};
+				angles[]={6.2001772,0,6.2431998};
 			};
 			name="task_8";
 			id=1556;
@@ -20361,23 +20376,6 @@ class Mission
 		};
 		class Item373
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5312.7847,372.27301,7202.0176};
-				angles[]={6.2392149,0,6.1582394};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				name="mine_0";
-			};
-			id=1561;
-			type="IEDLandBig_F";
-		};
-		class Item374
-		{
 			dataType="Marker";
 			position[]={7193.374,0,8000.9868};
 			name="marker_7";
@@ -20388,16 +20386,65 @@ class Mission
 			id=1569;
 			atlOffset=-167.28369;
 		};
+		class Item374
+		{
+			dataType="Trigger";
+			position[]={7268.9551,167.57001,7999.0542};
+			class Attributes
+			{
+				text="Set Full Awareness";
+				condition="call{attack_started;}";
+				onActivation="call{_handle = execVM ""scripts\blufor_combat.sqf""; hint ""fully aware.""}";
+				sizeA=250;
+				sizeB=250;
+				timeout[]={2,2,2};
+			};
+			id=1570;
+			type="EmptyDetectorAreaR250";
+		};
+		class Item375
+		{
+			dataType="Trigger";
+			position[]={5314.7852,370.02554,7179.2021};
+			angle=2.058424;
+			class Attributes
+			{
+				condition="call{this}";
+				onActivation="call{trucks_in_place = true; if (isEngineOn car_1) then {car_1 engineOn false}; car_d1 disableAI ""MOVE""; if (isEngineOn truck_1) then {truck_1 engineOn false}; truck_d1 disableAI ""MOVE""; if (isEngineOn truck_2) then {truck_2 engineOn false}; truck_d2 disableAI ""MOVE""; doGetOut truck_d1; doGetOut truck_d2; doGetOut car_d1; {_x action [""eject"", truck_1]} forEach units minefield_squad_1; {_x action [""eject"", truck_2]} forEach units minefield_squad_2;}";
+				sizeA=100;
+				activationType="WEST D";
+				activationBy="GUER";
+			};
+			id=1571;
+			type="EmptyDetectorAreaR50";
+		};
+		class Item376
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5300.1592,372.53873,7205.8979};
+				angles[]={6.2392201,0,6.2783856};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="mine_0";
+			};
+			id=1577;
+			type="IEDLandSmall_F";
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=50;
+			nextID=49;
 		};
 		class Links
 		{
-			items=50;
+			items=49;
 			class Item0
 			{
 				linkID=0;
@@ -20501,8 +20548,8 @@ class Mission
 			class Item10
 			{
 				linkID=10;
-				item0=547;
-				item1=158;
+				item0=1507;
+				item1=1510;
 				class CustomData
 				{
 					type="Sync";
@@ -20512,7 +20559,7 @@ class Mission
 			{
 				linkID=11;
 				item0=1507;
-				item1=1510;
+				item1=1508;
 				class CustomData
 				{
 					type="Sync";
@@ -20521,8 +20568,8 @@ class Mission
 			class Item12
 			{
 				linkID=12;
-				item0=1507;
-				item1=1508;
+				item0=1509;
+				item1=1510;
 				class CustomData
 				{
 					type="Sync";
@@ -20531,8 +20578,8 @@ class Mission
 			class Item13
 			{
 				linkID=13;
-				item0=1509;
-				item1=1510;
+				item0=1511;
+				item1=1514;
 				class CustomData
 				{
 					type="Sync";
@@ -20542,7 +20589,7 @@ class Mission
 			{
 				linkID=14;
 				item0=1511;
-				item1=1514;
+				item1=1512;
 				class CustomData
 				{
 					type="Sync";
@@ -20551,8 +20598,8 @@ class Mission
 			class Item15
 			{
 				linkID=15;
-				item0=1511;
-				item1=1512;
+				item0=1513;
+				item1=1514;
 				class CustomData
 				{
 					type="Sync";
@@ -20561,8 +20608,8 @@ class Mission
 			class Item16
 			{
 				linkID=16;
-				item0=1513;
-				item1=1514;
+				item0=1515;
+				item1=1511;
 				class CustomData
 				{
 					type="Sync";
@@ -20571,8 +20618,8 @@ class Mission
 			class Item17
 			{
 				linkID=17;
-				item0=1515;
-				item1=1511;
+				item0=1511;
+				item1=692;
 				class CustomData
 				{
 					type="Sync";
@@ -20581,7 +20628,7 @@ class Mission
 			class Item18
 			{
 				linkID=18;
-				item0=1511;
+				item0=1507;
 				item1=692;
 				class CustomData
 				{
@@ -20591,8 +20638,8 @@ class Mission
 			class Item19
 			{
 				linkID=19;
-				item0=1507;
-				item1=692;
+				item0=1516;
+				item1=1519;
 				class CustomData
 				{
 					type="Sync";
@@ -20602,7 +20649,7 @@ class Mission
 			{
 				linkID=20;
 				item0=1516;
-				item1=1519;
+				item1=1517;
 				class CustomData
 				{
 					type="Sync";
@@ -20611,8 +20658,8 @@ class Mission
 			class Item21
 			{
 				linkID=21;
-				item0=1516;
-				item1=1517;
+				item0=1518;
+				item1=1519;
 				class CustomData
 				{
 					type="Sync";
@@ -20621,8 +20668,8 @@ class Mission
 			class Item22
 			{
 				linkID=22;
-				item0=1518;
-				item1=1519;
+				item0=1520;
+				item1=1516;
 				class CustomData
 				{
 					type="Sync";
@@ -20631,8 +20678,8 @@ class Mission
 			class Item23
 			{
 				linkID=23;
-				item0=1520;
-				item1=1516;
+				item0=1516;
+				item1=692;
 				class CustomData
 				{
 					type="Sync";
@@ -20641,8 +20688,8 @@ class Mission
 			class Item24
 			{
 				linkID=24;
-				item0=1516;
-				item1=692;
+				item0=1521;
+				item1=1524;
 				class CustomData
 				{
 					type="Sync";
@@ -20652,7 +20699,7 @@ class Mission
 			{
 				linkID=25;
 				item0=1521;
-				item1=1524;
+				item1=1522;
 				class CustomData
 				{
 					type="Sync";
@@ -20661,8 +20708,8 @@ class Mission
 			class Item26
 			{
 				linkID=26;
-				item0=1521;
-				item1=1522;
+				item0=1523;
+				item1=1524;
 				class CustomData
 				{
 					type="Sync";
@@ -20671,8 +20718,8 @@ class Mission
 			class Item27
 			{
 				linkID=27;
-				item0=1523;
-				item1=1524;
+				item0=1525;
+				item1=1521;
 				class CustomData
 				{
 					type="Sync";
@@ -20681,8 +20728,8 @@ class Mission
 			class Item28
 			{
 				linkID=28;
-				item0=1525;
-				item1=1521;
+				item0=1521;
+				item1=692;
 				class CustomData
 				{
 					type="Sync";
@@ -20691,8 +20738,8 @@ class Mission
 			class Item29
 			{
 				linkID=29;
-				item0=1521;
-				item1=692;
+				item0=1531;
+				item1=1533;
 				class CustomData
 				{
 					type="Sync";
@@ -20702,7 +20749,7 @@ class Mission
 			{
 				linkID=30;
 				item0=1531;
-				item1=1533;
+				item1=1535;
 				class CustomData
 				{
 					type="Sync";
@@ -20711,8 +20758,8 @@ class Mission
 			class Item31
 			{
 				linkID=31;
-				item0=1531;
-				item1=1535;
+				item0=1532;
+				item1=1533;
 				class CustomData
 				{
 					type="Sync";
@@ -20721,8 +20768,8 @@ class Mission
 			class Item32
 			{
 				linkID=32;
-				item0=1532;
-				item1=1533;
+				item0=1534;
+				item1=1531;
 				class CustomData
 				{
 					type="Sync";
@@ -20731,8 +20778,8 @@ class Mission
 			class Item33
 			{
 				linkID=33;
-				item0=1534;
-				item1=1531;
+				item0=1531;
+				item1=692;
 				class CustomData
 				{
 					type="Sync";
@@ -20741,8 +20788,8 @@ class Mission
 			class Item34
 			{
 				linkID=34;
-				item0=1531;
-				item1=692;
+				item0=1540;
+				item1=1542;
 				class CustomData
 				{
 					type="Sync";
@@ -20752,7 +20799,7 @@ class Mission
 			{
 				linkID=35;
 				item0=1540;
-				item1=1542;
+				item1=1544;
 				class CustomData
 				{
 					type="Sync";
@@ -20761,8 +20808,8 @@ class Mission
 			class Item36
 			{
 				linkID=36;
-				item0=1540;
-				item1=1544;
+				item0=1541;
+				item1=1542;
 				class CustomData
 				{
 					type="Sync";
@@ -20771,8 +20818,8 @@ class Mission
 			class Item37
 			{
 				linkID=37;
-				item0=1541;
-				item1=1542;
+				item0=1543;
+				item1=1540;
 				class CustomData
 				{
 					type="Sync";
@@ -20781,8 +20828,8 @@ class Mission
 			class Item38
 			{
 				linkID=38;
-				item0=1543;
-				item1=1540;
+				item0=1552;
+				item1=1553;
 				class CustomData
 				{
 					type="Sync";
@@ -20792,7 +20839,7 @@ class Mission
 			{
 				linkID=39;
 				item0=1552;
-				item1=1553;
+				item1=1554;
 				class CustomData
 				{
 					type="Sync";
@@ -20801,8 +20848,8 @@ class Mission
 			class Item40
 			{
 				linkID=40;
-				item0=1552;
-				item1=1554;
+				item0=1555;
+				item1=1552;
 				class CustomData
 				{
 					type="Sync";
@@ -20811,8 +20858,8 @@ class Mission
 			class Item41
 			{
 				linkID=41;
-				item0=1555;
-				item1=1552;
+				item0=1551;
+				item1=1553;
 				class CustomData
 				{
 					type="Sync";
@@ -20821,8 +20868,8 @@ class Mission
 			class Item42
 			{
 				linkID=42;
-				item0=1551;
-				item1=1553;
+				item0=1552;
+				item1=692;
 				class CustomData
 				{
 					type="Sync";
@@ -20831,8 +20878,8 @@ class Mission
 			class Item43
 			{
 				linkID=43;
-				item0=1552;
-				item1=692;
+				item0=1556;
+				item1=1557;
 				class CustomData
 				{
 					type="Sync";
@@ -20842,7 +20889,7 @@ class Mission
 			{
 				linkID=44;
 				item0=1556;
-				item1=1557;
+				item1=1559;
 				class CustomData
 				{
 					type="Sync";
@@ -20851,8 +20898,8 @@ class Mission
 			class Item45
 			{
 				linkID=45;
-				item0=1556;
-				item1=1559;
+				item0=1558;
+				item1=1556;
 				class CustomData
 				{
 					type="Sync";
@@ -20861,8 +20908,8 @@ class Mission
 			class Item46
 			{
 				linkID=46;
-				item0=1558;
-				item1=1556;
+				item0=1547;
+				item1=1557;
 				class CustomData
 				{
 					type="Sync";
@@ -20871,8 +20918,8 @@ class Mission
 			class Item47
 			{
 				linkID=47;
-				item0=1547;
-				item1=1557;
+				item0=1540;
+				item1=692;
 				class CustomData
 				{
 					type="Sync";
@@ -20881,16 +20928,6 @@ class Mission
 			class Item48
 			{
 				linkID=48;
-				item0=1540;
-				item1=692;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item49
-			{
-				linkID=49;
 				item0=1556;
 				item1=692;
 				class CustomData
