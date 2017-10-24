@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1584;
+		nextID=1586;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6669.124,378.29388,8796.7881};
-		dir[]={-0.89336687,-0.36523056,-0.26219377};
-		up[]={-0.35059687,0.93081731,-0.10289591};
-		aside[]={-0.28164372,-1.4856487e-006,0.95964813};
+		pos[]={7729.2437,734.73236,9073.8682};
+		dir[]={-0.49104568,-0.42414972,-0.76105708};
+		up[]={-0.23003957,0.90547013,-0.35652655};
+		aside[]={-0.84037089,-1.5674159e-006,0.54222465};
 	};
 };
 binarizationWanted=0;
@@ -91,6 +91,7 @@ addons[]=
 	"WW2_Assets_c_Vehicles_Extended_HUD_c",
 	"WW2_Assets_c_Vehicles_TurretsConfig_c",
 	"WW2_Assets_s_Megagoth1702_Sounds_Config_CfgVehicles",
+	"WW2_Assets_c_Vehicles_SoundFrameWork_c",
 	"A3_Modules_F_Supports",
 	"CUP_Buildings_Config",
 	"A3_Structures_F_Exp_Infrastructure_WaterSupply",
@@ -99,13 +100,14 @@ addons[]=
 	"CUP_WaterVehicles_Fishing_Boat",
 	"A3_Weapons_F_Explosives",
 	"A3_Modules_F_Curator_Mines",
-	"WW2_Assets_c_Vehicles_WheeledAPC_c_M3_Halftrack"
+	"WW2_Assets_c_Vehicles_StaticWeapons_c_Towing",
+	"WW2_Assets_c_Vehicles_Wheeled_c_Scout_M3"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=61;
+		items=63;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -417,32 +419,42 @@ class AddonsMetaData
 		};
 		class Item56
 		{
+			className="WW2_Assets_c_Vehicles_SoundFrameWork_c";
+			name="WW2_Assets_c_Vehicles_SoundFrameWork_c";
+		};
+		class Item57
+		{
 			className="CUP_Buildings_Config";
 			name="CUP_Buildings_Config";
 		};
-		class Item57
+		class Item58
 		{
 			className="A3_Structures_F_Exp_Infrastructure";
 			name="Arma 3 Apex - Infrastructure Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item58
+		class Item59
 		{
 			className="CUP_WaterVehicles_Fishing_Boat";
 			name="CUP_WaterVehicles_Fishing_Boat";
 		};
-		class Item59
+		class Item60
 		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item60
+		class Item61
 		{
-			className="WW2_Assets_c_Vehicles_WheeledAPC_c_M3_Halftrack";
-			name="WW2_Assets_c_Vehicles_WheeledAPC_c_M3_Halftrack";
+			className="WW2_Assets_c_Vehicles_StaticWeapons_c_Towing";
+			name="WW2_Assets_c_Vehicles_StaticWeapons_c_Towing";
+		};
+		class Item62
+		{
+			className="WW2_Assets_c_Vehicles_Wheeled_c_Scout_M3";
+			name="WW2_Assets_c_Vehicles_Wheeled_c_Scout_M3";
 		};
 	};
 };
@@ -698,7 +710,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={7233.3511,167.56659,7933.2319};
-			angle=1.6361063;
+			angle=1.6361065;
 			class Attributes
 			{
 				name="eng_on";
@@ -3195,7 +3207,7 @@ class Mission
 			};
 			id=258;
 			type="Land_Table_EP1";
-			atlOffset=1.4473419;
+			atlOffset=1.4473572;
 		};
 		class Item35
 		{
@@ -3206,13 +3218,12 @@ class Mission
 				angles[]={0.0087073296,0.71458918,6.2756367};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 			};
 			id=259;
 			type="Land_Table_EP1";
-			atlOffset=7.6293945e-005;
+			atlOffset=1.4352722;
 		};
 		class Item36
 		{
@@ -3229,7 +3240,6 @@ class Mission
 			};
 			id=260;
 			type="Land_Table_EP1";
-			atlOffset=0.0002746582;
 		};
 		class Item37
 		{
@@ -5725,7 +5735,7 @@ class Mission
 				textures="sernyt";
 			};
 			id=477;
-			type="LIB_opelblitz_open_y_camo";
+			type="LIB_OpelBlitz_Open_Y_Camo";
 			atlOffset=-0.0079956055;
 			class CustomAttributes
 			{
@@ -5767,7 +5777,7 @@ class Mission
 				textures="sernyt";
 			};
 			id=479;
-			type="LIB_opelblitz_open_y_camo";
+			type="LIB_OpelBlitz_Open_Y_Camo";
 			atlOffset=-0.0079956055;
 			class CustomAttributes
 			{
@@ -5809,7 +5819,7 @@ class Mission
 				textures="sernyt";
 			};
 			id=480;
-			type="LIB_opelblitz_open_y_camo";
+			type="LIB_OpelBlitz_Open_Y_Camo";
 			atlOffset=-0.0059814453;
 			class CustomAttributes
 			{
@@ -6762,7 +6772,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={5326.958,370.20755,7192.6851};
-			angle=0.47043595;
+			angle=0.4704358;
 			class Attributes
 			{
 				name="detect_truck_2";
@@ -7212,7 +7222,7 @@ class Mission
 				textures="sernyt";
 			};
 			id=618;
-			type="LIB_opelblitz_open_y_camo";
+			type="LIB_OpelBlitz_Open_Y_Camo";
 			atlOffset=0.0069885254;
 			class CustomAttributes
 			{
@@ -7255,7 +7265,7 @@ class Mission
 				textures="sernyt";
 			};
 			id=629;
-			type="LIB_opelblitz_open_y_camo";
+			type="LIB_OpelBlitz_Open_Y_Camo";
 			atlOffset=0.014038086;
 			class CustomAttributes
 			{
@@ -11313,7 +11323,7 @@ class Mission
 				textures="sernyt";
 			};
 			id=793;
-			type="LIB_opelblitz_open_y_camo";
+			type="LIB_OpelBlitz_Open_Y_Camo";
 			atlOffset=-1.5258789e-005;
 			class CustomAttributes
 			{
@@ -12022,6 +12032,7 @@ class Mission
 			};
 			id=943;
 			type="LIB_GazM1";
+			atlOffset=-0.075012207;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12090,6 +12101,7 @@ class Mission
 			};
 			id=968;
 			type="LIB_GazM1";
+			atlOffset=-0.075012207;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12130,7 +12142,7 @@ class Mission
 			};
 			id=969;
 			type="LIB_GazM1";
-			atlOffset=0.0059967041;
+			atlOffset=-0.069000244;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12163,7 +12175,7 @@ class Mission
 			{
 				text="Set  Unaware";
 				condition="call{(tank_engines_on && !attack_started) || (bells_ringing && !attack_started);}";
-				onActivation="call{_handle = execVM ""scripts\blufor_unaware.sqf"";}";
+				onActivation="call{_unaware_handle = execVM ""scripts\blufor_unaware.sqf"";}";
 				sizeA=400;
 				sizeB=400;
 				repeatable=1;
@@ -12179,7 +12191,7 @@ class Mission
 			{
 				text="Set Aware";
 				condition="call{(!tank_engines_on && !attack_started && !bells_ringing) || (attack_started);}";
-				onActivation="call{_handle = execVM ""scripts\blufor_aware.sqf"";}";
+				onActivation="call{_aware_handle = execVM ""scripts\blufor_aware.sqf"";}";
 				sizeA=400;
 				sizeB=400;
 				repeatable=1;
@@ -12689,7 +12701,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=1148;
-			type="LIB_opelblitz_open_y_camo";
+			type="LIB_OpelBlitz_Open_Y_Camo";
 			atlOffset=0.14710236;
 			class CustomAttributes
 			{
@@ -12731,7 +12743,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=1168;
-			type="LIB_opelblitz_fuel";
+			type="LIB_OpelBlitz_Fuel";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12773,7 +12785,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=1172;
-			type="LIB_opelblitz_fuel";
+			type="LIB_OpelBlitz_Fuel";
 			atlOffset=1.5258789e-005;
 			class CustomAttributes
 			{
@@ -12815,7 +12827,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=1175;
-			type="LIB_opelblitz_fuel";
+			type="LIB_OpelBlitz_Fuel";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12856,7 +12868,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=1178;
-			type="LIB_opelblitz_fuel";
+			type="LIB_OpelBlitz_Fuel";
 			atlOffset=-7.6293945e-006;
 			class CustomAttributes
 			{
@@ -12898,7 +12910,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=1180;
-			type="LIB_opelblitz_tent_y_camo";
+			type="LIB_OpelBlitz_Tent_Y_Camo";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12939,7 +12951,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=1183;
-			type="LIB_opelblitz_tent_y_camo";
+			type="LIB_OpelBlitz_Tent_Y_Camo";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12980,7 +12992,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=1185;
-			type="LIB_opelblitz_ammo";
+			type="LIB_OpelBlitz_Ammo";
 		};
 		class Item271
 		{
@@ -13123,7 +13135,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=1196;
-			type="LIB_opelblitz_open_y_camo";
+			type="LIB_OpelBlitz_Open_Y_Camo";
 			atlOffset=0.0045623779;
 			class CustomAttributes
 			{
@@ -13385,7 +13397,7 @@ class Mission
 			};
 			id=1211;
 			type="LIB_StuG_III_G";
-			atlOffset=0.00044250488;
+			atlOffset=9.9182129e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17235,6 +17247,7 @@ class Mission
 			};
 			id=1466;
 			type="LIB_GazM1";
+			atlOffset=-0.075012207;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17926,7 +17939,7 @@ class Mission
 			{
 				text="Task 2 Complete";
 				condition="call{this}";
-				onActivation="call{task_2_done = true;" \n "cutText [""GET OUT OF THE TRUCKS! TAKE COVER!"", ""PLAIN""];" \n "if (isServer) exitWith {_handle = execVM ""scripts\cas.sqf""};}";
+				onActivation="call{task_2_done = true;" \n "cutText [""GET OUT OF THE TRUCKS! TAKE COVER!"", ""PLAIN""];" \n "if (isServer) exitWith {_cas_handle = execVM ""scripts\cas.sqf""};}";
 				sizeA=15;
 				sizeB=15;
 				sizeC=10;
@@ -18777,8 +18790,9 @@ class Mission
 				text="Detect CAS Pass";
 				condition="call{this}";
 				onActivation="call{kellys_car_1 setdamage 1; kellys_car_2 setDamage 1;}";
-				sizeA=500;
+				sizeA=1400;
 				activationBy="WEST";
+				isRectangle=1;
 			};
 			id=1529;
 			type="EmptyDetectorAreaR50";
@@ -19436,6 +19450,7 @@ class Mission
 				timeout[]={5,5,5};
 				activationType="NOT PRESENT";
 				activationBy="WEST";
+				effectMusic="05";
 			};
 			id=1541;
 			type="EmptyDetectorAreaR50";
@@ -20334,7 +20349,7 @@ class Mission
 			{
 				text="Set Full Awareness";
 				condition="call{attack_started;}";
-				onActivation="call{_handle = execVM ""scripts\blufor_combat.sqf"";}";
+				onActivation="call{_attack_started_handle = execVM ""scripts\blufor_combat.sqf"";}";
 				sizeA=250;
 				sizeB=250;
 				timeout[]={2,2,2};
@@ -20392,7 +20407,7 @@ class Mission
 		class Item373
 		{
 			dataType="Trigger";
-			position[]={7276.9082,175.13501,7958.8779};
+			position[]={7270.7979,167.57001,7969.8379};
 			class Attributes
 			{
 				text="Assign Task 6 - Assault the town";
@@ -20402,7 +20417,6 @@ class Mission
 			};
 			id=1580;
 			type="EmptyDetector";
-			atlOffset=0.22322083;
 		};
 		class Item374
 		{
@@ -20424,18 +20438,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6761.4702,108.01054,8837.4355};
+				position[]={6761.2163,109.25975,8829.291};
 				angles[]={0.032794736,3.1836901,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				name="kellys_car_2";
+				name="kellys_car_1";
 				textures="standard";
 			};
-			id=1582;
-			type="LIB_US_NAC_M3_Halftrack";
+			id=1584;
+			type="LIB_US_Scout_M3";
 			atlOffset=-7.6293945e-006;
 			class CustomAttributes
 			{
@@ -20466,19 +20480,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6761.3174,108.26765,8829.4248};
+				position[]={6761.3691,109.003,8837.3018};
 				angles[]={0.032794736,3.1836901,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				name="kellys_car_1";
+				name="kellys_car_2";
 				textures="standard";
 			};
-			id=1583;
-			type="LIB_US_NAC_M3_Halftrack";
-			atlOffset=-7.6293945e-006;
+			id=1585;
+			type="LIB_US_Scout_M3";
+			atlOffset=0.0059890747;
 			class CustomAttributes
 			{
 				class Attribute0
