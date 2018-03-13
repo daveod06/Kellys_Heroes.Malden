@@ -12175,7 +12175,7 @@ class Mission
 			{
 				text="Set  Unaware";
 				condition="call{(tank_engines_on && !attack_started) || (bells_ringing && !attack_started);}";
-				onActivation="call{_unaware_handle = execVM ""scripts\blufor_unaware.sqf"";}";
+				onActivation="call{_unaware_handle = execVM ""scripts/blufor_unaware.sqf"";}";
 				sizeA=400;
 				sizeB=400;
 				repeatable=1;
@@ -12191,7 +12191,7 @@ class Mission
 			{
 				text="Set Aware";
 				condition="call{(!tank_engines_on && !attack_started && !bells_ringing) || (attack_started);}";
-				onActivation="call{_aware_handle = execVM ""scripts\blufor_aware.sqf"";}";
+				onActivation="call{_aware_handle = execVM ""scripts/blufor_aware.sqf"";}";
 				sizeA=400;
 				sizeB=400;
 				repeatable=1;
@@ -17939,7 +17939,7 @@ class Mission
 			{
 				text="Task 2 Complete";
 				condition="call{this}";
-				onActivation="call{task_2_done = true;" \n "cutText [""GET OUT OF THE TRUCKS! TAKE COVER!"", ""PLAIN""];" \n "if (isServer) exitWith {_cas_handle = execVM ""scripts\cas.sqf""};}";
+				onActivation="call{task_2_done = true;" \n "cutText [""GET OUT OF THE TRUCKS! TAKE COVER!"", ""PLAIN""];" \n "if (isServer) exitWith {_cas_handle = execVM ""scripts/cas.sqf""};}";
 				sizeA=15;
 				sizeB=15;
 				sizeC=10;
@@ -19572,7 +19572,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this addaction [""Pick Up Money"", ""scripts\NewAddaction.sqf""];}";
+				init="call{this addaction [""Pick Up Money"", ""scripts/newaddaction.sqf""];}";
 				name="Money1";
 			};
 			id=1546;
@@ -20349,7 +20349,7 @@ class Mission
 			{
 				text="Set Full Awareness";
 				condition="call{attack_started;}";
-				onActivation="call{_attack_started_handle = execVM ""scripts\blufor_combat.sqf"";}";
+				onActivation="call{_attack_started_handle = execVM ""scripts/blufor_combat.sqf"";}";
 				sizeA=250;
 				sizeB=250;
 				timeout[]={2,2,2};

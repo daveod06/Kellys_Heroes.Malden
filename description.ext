@@ -6,7 +6,7 @@ setViewDistance = 6000;
 author="Sabersnack";
 OnLoadName = "Kelly's Heroes";
 OnLoadMission = "Kill Nazis. Link up with Oddball. Steal the gold.";
-loadScreen = "images\kellys_heroes.jpg";
+loadScreen = "images/kellys_heroes.jpg";
 onLoadMissionTime = 1;
 
 class CfgMusic
@@ -15,43 +15,43 @@ sounds[] = {01,02,03,04,05};
 class 01
 {
 name = "Kellys Heroes Commando Prelude";
-sound[] = {"music\Commando_Prelude.ogg", db+10, 1.0};
+sound[] = {"music/commando_prelude.ogg", db+10, 1.0};
 titles[] = {0,""};
 };
 class 02
 {
 name = "Kellys Heroes Minefield";
-sound[] = {"music\Minefield.ogg", db+10, 1.0};
+sound[] = {"music/minefield.ogg", db+10, 1.0};
 titles[] = {0,""};
 };
 class 03
 {
 name = "Kellys Heroes Ready For The Ambush";
-sound[] = {"music\Ready_For_The_Ambush.ogg", db+10, 1.0};
+sound[] = {"music/ready_for_the_ambush.ogg", db+10, 1.0};
 titles[] = {0,""};
 };
 class 04
 {
 name = "Kellys Heroes Tiger Tank";
-sound[] = {"music\Tiger_Tank.ogg", db+10, 1.0};
+sound[] = {"music/tiger_tank.ogg", db+10, 1.0};
 titles[] = {0,""};
 };
 class 05
 {
 name = "Kellys Heroes Quick Draw Kelly";
-sound[] = {"music\Quick_Draw_Kelly.ogg", db+10, 1.0};
+sound[] = {"music/quick_draw_kelly.ogg", db+10, 1.0};
 titles[] = {0,""};
 };
 class 06
 {
 name = "Kellys Heroes Close Order Drill";
-sound[] = {"music\Close_Order_Drill.ogg", db+10, 1.0};
+sound[] = {"music/close_order_drill.ogg", db+10, 1.0};
 titles[] = {0,""};
 };
 class 07
 {
 name = "Kellys Heroes Take Cover";
-sound[] = {"music\Take_Cover.ogg", db+10, 1.0};
+sound[] = {"music/take_cover.ogg", db+10, 1.0};
 titles[] = {0,""};
 };
 };
@@ -62,14 +62,14 @@ sounds[] = {Church, Oddball};
 class Church
 {
 name = "Kellys Heroes Church Bells";
-sound0[] = {"sfx\Church_Bells.ogg", db-0, 1.0, 1200, 1, 0, 0, 0};
+sound0[] = {"sfx/church_bells.ogg", db-0, 1.0, 1200, 1, 0, 0, 0};
 sounds[] = {sound0};
 empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 };
 class Oddball
 {
 name = "Kellys Heroes Sherman Holiday Inn";
-sound0[] = {"sfx\Sherman_Holiday_Inn.ogg", db-0, 1.0, 120, 1, 0, 0, 0};
+sound0[] = {"sfx/sherman_holiday_inn.ogg", db-0, 1.0, 120, 1, 0, 0, 0};
 sounds[] = {sound0};
 empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 };
